@@ -1,0 +1,111 @@
+.footer {
+  padding-block: 2.5rem;
+  background-color: inherit;
+  @media screen and (min-width: 62.5em) {
+    padding-block: 5rem;
+  }
+
+  > .container {
+    display: grid;
+    gap: 3rem;
+
+    @media screen and (min-width: 62.5em) {
+      gap: 4rem;
+      grid-template-columns: auto 1fr auto;
+      align-items: start;
+    }
+  }
+
+  dt {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.38);
+    margin-block-end: 0.875rem;
+  }
+
+  .nav-links {
+    order: 1;
+
+    @media screen and (min-width: 62.5em) {
+      order: 2;
+    }
+
+    dl {
+      display: grid;
+      gap: 1.5rem;
+
+      @media screen and (min-width: 62.5em) {
+        grid-auto-flow: column;
+        grid-auto-columns: auto;
+      }
+    }
+    dd + dd {
+      margin-block-start: 0.625rem;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.875rem;
+    }
+  }
+
+  .follow-us {
+    display: block !important;
+    order: 2;
+    @media screen and (min-width: 62.5em) {
+      order: 3;
+    }
+
+    .links {
+      display: flex;
+      gap: 1.25rem;
+      // justify-content: space-evenly;
+      margin-block-end: 1.25rem;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 100vmax;
+      background-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+      fill: #fff;
+    }
+
+    .contact-btn {
+      all: initial;
+      display: inline-block;
+      // height: 30px;
+      width: auto;
+      padding: 0.675rem 1rem;
+      font-size: 0.875rem;
+      font-family: inherit;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.87);
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 4px;
+    }
+  }
+
+  .brand {
+    order: 3;
+    max-width: 49ch;
+    display: grid;
+    gap: 1rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.38);
+    @media screen and (min-width: 62.5em) {
+      order: 1;
+    }
+
+    > :last-child {
+      margin-block-start: 1.25rem;
+    }
+  }
+}

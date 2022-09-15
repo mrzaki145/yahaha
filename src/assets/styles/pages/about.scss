@@ -1,0 +1,55 @@
+.about {
+  .header {
+    @media screen and (min-width: 62.5em) {
+      padding-block-end: 12.5rem;
+      background-repeat: no-repeat;
+      background-image: url("./assets/images/about_bg_left.svg"),
+        url("./assets/images/about_bg_right.svg");
+      background-position: bottom left -20px, bottom 240px right -30px;
+      background-size: 220px auto, 240px auto;
+    }
+  }
+
+  .hero {
+    max-width: 880px;
+  }
+
+  .team {
+    display: grid;
+    gap: 2.5rem;
+    align-items: center;
+    text-align: center;
+
+    @media screen and (min-width: 62.5em) {
+      grid-auto-flow: column;
+      grid-auto-columns: auto;
+      justify-content: space-evenly;
+      max-width: 900px;
+      margin-inline: auto;
+    }
+
+    img {
+      margin-inline: auto;
+      margin-block-end: 1rem;
+    }
+  }
+
+  .companies {
+    display: flex;
+    gap: 2.5rem;
+    flex-flow: column wrap;
+    align-items: center;
+
+    @media screen and (min-width: 62.5em) {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    img {
+      max-width: 115px;
+    }
+    &.investors img {
+      opacity: 0.6;
+    }
+  }
+}

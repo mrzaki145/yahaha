@@ -1,0 +1,25 @@
+.btn {
+  --clr-bg: #fbcc59;
+  --clr-fg: #0a090a;
+
+  display: inline-block;
+  text-decoration: none;
+  text-transform: capitalize;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  color: var(--clr-fg);
+  background-color: var(--clr-bg);
+  // background-image: url("./../../images/btn_bg.png");
+  background-image: url("./assets/images/btn_bg.png");
+  background-repeat: repeat-x;
+  background-position: center right;
+  background-size: auto 100%;
+  border-radius: 100vmax;
+  transition: opacity 0.25s ease;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}

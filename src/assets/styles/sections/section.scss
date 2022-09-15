@@ -1,0 +1,14 @@
+.section {
+  padding-block-end: 10rem;
+
+  &__header {
+    max-width: 80ch;
+    margin-inline: auto;
+    margin-block-end: 4rem;
+    text-align: center;
+
+    p {
+      margin-block-start: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,110 @@
+.header {
+  position: relative;
+  padding-block: 5rem 8rem;
+  text-align: center;
+
+  .hero {
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+
+    @media screen and (min-width: 62.5em) {
+      max-width: 740px;
+      padding-inline: 0;
+    }
+
+    &.stack--sm > * + * {
+      margin-block-start: 2rem;
+    }
+  }
+
+  span {
+    display: block;
+  }
+
+  .video {
+    position: relative;
+    z-index: 10;
+  }
+
+  .objects {
+    display: none;
+    user-select: none;
+    overflow: hidden;
+
+    @media screen and (min-width: 62.5em) {
+      display: block;
+      position: absolute;
+      z-index: 9;
+      inset: 0;
+      padding: 0;
+    }
+
+    > * {
+      position: relative;
+      animation-name: floating;
+      // animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+
+    .boom {
+      width: 230px;
+      animation-duration: 3s;
+
+      @media screen and (min-width: 62.5em) {
+        top: 230px;
+        left: -80px;
+      }
+      @media screen and (min-width: 78.75em) {
+        left: 8%;
+      }
+    }
+
+    .roundIcon {
+      width: 68px;
+      animation-duration: 2s;
+
+      @media screen and (min-width: 62.5em) {
+        top: 165px;
+        left: 45px;
+      }
+      @media screen and (min-width: 78.75em) {
+        left: 15%;
+      }
+    }
+
+    .helix {
+      width: 120px;
+      animation-duration: 2.5s;
+
+      @media screen and (min-width: 62.5em) {
+        top: 165px;
+      }
+      @media screen and (min-width: 78.75em) {
+        right: -80%;
+      }
+    }
+
+    .airplane {
+      width: 425px;
+      animation-duration: 5s;
+
+      @media screen and (min-width: 62.5em) {
+        top: 63px;
+        right: -64%;
+      }
+    }
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}

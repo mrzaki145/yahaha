@@ -1,0 +1,69 @@
+.container {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @media screen and (min-width: 62.5em) {
+    padding-inline: 4rem;
+  }
+  @media screen and (min-width: 90em) {
+    padding-inline: 7.5rem;
+  }
+}
+
+// stack
+[class^="stack"] > * {
+  margin-block: 0;
+}
+
+.stack--lg > * + * {
+  margin-block-start: 5rem;
+}
+
+.stack--sm > * + * {
+  margin-block-start: 0.5rem;
+
+  @media screen and (min-width: 62.5em) {
+    margin-block-start: 1rem;
+  }
+}
+// -----
+
+// switcher
+.switcher {
+  display: grid;
+  gap: 3rem;
+  max-width: 1060px;
+  margin-inline: auto;
+  text-align: center;
+  place-items: center;
+
+  @media screen and (min-width: 62.5em) {
+    gap: 6rem;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: start;
+  }
+
+  > img {
+    width: 100%;
+    max-width: 30rem;
+    // justify-self: center;
+  }
+  &:nth-of-type(even) {
+    @media screen and (min-width: 62.5em) {
+      img {
+        order: 1;
+      }
+    }
+  }
+
+  figcaption {
+    max-width: 43ch;
+
+    @media screen and (min-width: 62.5em) {
+      margin-inline: 0;
+    }
+  }
+}
+
+// ----

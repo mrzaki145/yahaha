@@ -1,0 +1,73 @@
+.download {
+  h1 {
+    margin-block-end: 2rem;
+  }
+
+  .switcher {
+    gap: 3rem !important;
+
+    img {
+      max-width: 35rem;
+    }
+  }
+
+  .stories {
+    display: grid;
+    gap: 3.75rem;
+    justify-items: center;
+
+    @media screen and (min-width: 62.5em) {
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+      justify-items: stretch;
+    }
+  }
+
+  .store {
+    display: grid;
+    gap: 2.5rem;
+    padding: 2rem;
+    background-color: #1b181e;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 40px;
+
+    @media screen and (min-width: 62.5em) {
+      padding: 3.5rem;
+
+      h2 {
+        font-size: 2.75rem;
+      }
+    }
+
+    img {
+      width: 203px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 1.25rem;
+      flex-direction: column;
+
+      @media screen and (min-width: 27.1875em) {
+        flex-direction: row;
+      }
+    }
+
+    .download-btn {
+      display: inline-flex;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 0.5rem 1.25rem;
+      border-radius: 100vmax;
+      color: #000;
+      background-color: #fff;
+    }
+    .icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

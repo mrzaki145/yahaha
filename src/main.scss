@@ -1,0 +1,130 @@
+@import "./assets/fonts/fonts.css";
+
+:root {
+  /* colors */
+  --clr: #241120;
+  --clr: #0d1134;
+  --clr: #415977;
+  --clr: #6aa4e2;
+  --clr: #a9e5f8;
+  --clr: #0a1b11;
+  --clr: #090906;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+html {
+  color-scheme: dark light;
+  background-color: #0a090a;
+}
+
+body {
+  font-family: "Inter", serif, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+
+  color: #fff;
+  background-color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  font-family: "ClashDisplay";
+  font-weight: 600;
+}
+
+h1,
+.h1 {
+  font-size: 2.25rem;
+
+  @media screen and (min-width: 34.375em) {
+    font-size: 3rem;
+  }
+  @media screen and (min-width: 45.625em) {
+    font-size: 3.75rem;
+  }
+  @media screen and (min-width: 62.5em) {
+    font-size: 4.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+
+  @media screen and (min-width: 62.5em) {
+    font-size: 3.5rem;
+  }
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul,
+ol,
+dl {
+  list-style-type: none;
+}
+
+#root {
+  isolation: isolate;
+}
+
+@import "./assets/styles/components/button";
+@import "./assets/styles/components/layout";
+@import "./assets/styles/components/form";
+@import "./assets/styles/sections/nav";
+@import "./assets/styles/sections/header";
+@import "./assets/styles/sections/section";
+@import "./assets/styles/sections/cta";
+@import "./assets/styles/sections/footer";
+
+// pages
+@import "./assets/styles/pages/create";
+@import "./assets/styles/pages/download";
+@import "./assets/styles/pages/about";
+@import "./assets/styles/pages/sign";
+
+:root {
+  user-select: none;
+}

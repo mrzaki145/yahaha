@@ -1,0 +1,94 @@
+.nav {
+  position: relative;
+  z-index: 100;
+
+  .container {
+    // min-height: 72px;
+    padding-block: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__toggler {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+
+    .icon {
+      height: 100%;
+    }
+
+    @media screen and (min-width: 62.5em) {
+      display: none;
+      pointer-events: none;
+    }
+  }
+
+  .logo-box {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    :first-child {
+      width: 30px;
+    }
+
+    :last-child {
+      width: 95px;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    inset: 100% 0 auto 0;
+    z-index: 99;
+    display: grid;
+    gap: 1.25rem;
+    padding-block: 1.25rem;
+    background-color: #0a090a;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    visibility: hidden;
+    pointer-events: none;
+    &.open {
+      visibility: visible;
+      pointer-events: all;
+    }
+
+    @media screen and (min-width: 62.5em) {
+      position: static;
+      gap: 2.25rem;
+      grid-auto-flow: column;
+      padding-block: 0;
+      background-color: transparent;
+      border: none;
+      visibility: visible !important;
+      pointer-events: all !important;
+    }
+
+    li {
+      padding-inline-start: 3.85rem;
+
+      @media screen and (min-width: 62.5em) {
+        padding: 0;
+      }
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
